@@ -3,6 +3,9 @@ import { Layout, Menu } from 'antd';
 import { UnlockOutlined } from '@ant-design/icons';
 import Home from './Home';
 import Login from './Login';
+import Services from './Services';
+import Products from './Products';
+import Contact from './Contact';
 
 const { Header } = Layout;
 
@@ -21,10 +24,19 @@ class LandingPage extends Component {
 		let updatedSelectedComponent = null;
 		switch(menu.key) {
 			case 'default':
-				updatedSelectedComponent = <Home/>;
+				updatedSelectedComponent = <Home/>
+				break;
+			case 'services':
+				updatedSelectedComponent = <Services/>
+				break;
+			case 'products':
+				updatedSelectedComponent = <Products/>
+				break;
+			case 'contact':
+				updatedSelectedComponent = <Contact/>
 				break;
 			case 'login':
-				updatedSelectedComponent = <Login/>;
+				updatedSelectedComponent = <Login/>
 				break;
 			default:
 				updatedSelectedComponent = null;
